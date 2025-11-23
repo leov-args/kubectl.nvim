@@ -36,6 +36,18 @@ use {
 }
 ```
 
+## Configuration
+
+You can configure the plugin using the `setup` function. Example:
+
+```lua
+require('kubectl').setup({
+  log_level = vim.log.levels.WARN,
+  tmux_split_cmd = "tmux split-window -v '%s; read'",
+  notify_timeout = 3000,
+})
+```
+
 ## Usage
 
 Call the main function from your Neovim config or command line:
